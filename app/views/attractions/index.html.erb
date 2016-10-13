@@ -1,0 +1,7 @@
+<h1>All the attractions!!</h1>
+
+<%= render partial: "attractions", collection: @attractions %>
+
+<%if policy(Attraction.new).create? %>
+	<%= link_to "New Attraction", new_attraction_path %>
+<%end%>

@@ -1,0 +1,11 @@
+<ol>
+	<li><%= attractions.name%></li>
+	<ul>
+		<%if policy(Attraction.new).create? %>
+			<li><%= link_to "Show #{attractions.name}", attraction_path(attractions) %></li>
+		<%else%>
+			<li><%= link_to "Go on #{attractions.name}", attraction_path(attractions) %></li>
+		<%end%>
+		
+	</ul>	
+</ol>
